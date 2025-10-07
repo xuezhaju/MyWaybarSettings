@@ -1,0 +1,59 @@
+/* 导入 base16 颜色方案 */
+@import "base16-waybar/colors/base16-default-dark.css";
+
+* {
+    border: none;
+    border-radius: 8px;
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @base00;
+    color: @base05;
+    border: 1px solid @base03;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#custom-launcher {
+    background: @base0D;
+    color: @base00;
+    padding: 0 12px;
+    border-radius: 6px;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    background: transparent;
+    color: @base05;
+}
+
+#workspaces button.active {
+    background: @base0A;
+    color: @base00;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+    background: @base02;
+}
+
+#clock, #cpu, #memory, #pulseaudio, #battery {
+    padding: 0 10px;
+    margin: 0 3px;
+    background: @base01;
+    border-radius: 6px;
+}
+
+#battery.charging {
+    background: @base0B;
+    color: @base00;
+}
+
+#pulseaudio.muted {
+    background: @base08;
+    color: @base00;
+}

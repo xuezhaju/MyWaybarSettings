@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 8,
+    "modules-left": ["hyprland/workspaces", "custom/launcher"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "battery", "tray"],
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠"
+        }
+    },
+    
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "wofi --show drun"
+    },
+    
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d %A}"
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": ["󰕿", "󰖀", "󰕾"]
+    }
+}

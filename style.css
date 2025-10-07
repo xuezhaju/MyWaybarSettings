@@ -1,0 +1,97 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border-bottom: 2px solid #313244;
+}
+
+/* Arch 图标样式 - 恢复渐变效果 */
+#custom-arch {
+    background: linear-gradient(135deg, #1793d1 0%, #8a4a8a 100%);
+    color: #1e1e2e;
+    margin: 4px 4px 4px 8px;
+    padding: 0 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#custom-arch:hover {
+    background: linear-gradient(135deg, #1ca8e4 0%, #9a5a9a 100%);
+}
+
+#workspaces {
+    background: #313244;
+    margin: 4px 8px 4px 4px;
+    padding: 0 8px;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    color: #585b70;
+    padding: 0 8px;
+    margin: 4px 2px;
+}
+
+#workspaces button.active {
+    color: #cba6f7;
+}
+
+#workspaces button:hover {
+    color: #cdd6f4;
+}
+
+#clock {
+    background: #313244;
+    color: #cba6f7;
+    margin: 4px 8px;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+
+#pulseaudio {
+    background: #313244;
+    color: #89b4fa;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 6px;
+}
+
+#network {
+    background: #313244;
+    color: #f5c2e7;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 6px;
+}
+
+#battery {
+    background: #313244;
+    color: #a6e3a1;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 6px;
+}
+
+#cpu, #memory {
+    background: #313244;
+    color: #a6e3a1;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 6px;
+}
+
+#tray {
+    background: #313244;
+    margin: 4px 2px;
+    padding: 0 12px;
+    border-radius: 6px;
+}

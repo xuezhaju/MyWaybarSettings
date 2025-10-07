@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "spacing": 4,
+  "margin-top": 6,
+  "margin-left": 6,
+  "margin-right": 6,
+  
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory", 
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+
+  "custom/arch": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "pkill wofi || wofi --show drun --allow-images",
+    "on-click-right": "pkill waybar && waybar"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": "○",
+      "active": "●",
+      "urgent": "⏺"
+    },
+    "on-click": "activate"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "format-alt": " {:%Y-%m-%d}",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "interval": 5
+  },
+
+  "memory": {
+    "format": "󰆪 {percentage}%",
+    "interval": 5
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}%",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󰂄 {capacity}%",
+    "interval": 5
+  },
+
+  "tray": {
+    "spacing": 8
+  },
+
+  "style": "style.css"
+}
